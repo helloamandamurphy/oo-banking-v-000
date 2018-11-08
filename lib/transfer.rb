@@ -21,6 +21,7 @@ class Transfer
       @receiver.balance = @receiver.balance + @amount
       @status = "complete"
     else
+      @status = "rejected"
       "Transaction rejected. Please check your account balance."
     end
   end
@@ -31,7 +32,6 @@ class Transfer
       @receiver.balance = @receiver.balance - @amount
       @status = "reversed"
     else
-      @status = "rejected"
       "There is no transaction to reverse."
     end
   end
