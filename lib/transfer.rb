@@ -31,8 +31,8 @@ class Transfer
       @receiver.balance = @receiver.balance - @amount
       @status = "reversed"
     else
-      "There is no transaction to reverse."
       @status = "rejected"
+      "There is no transaction to reverse."
     end
   end
 end
