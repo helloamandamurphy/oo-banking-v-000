@@ -32,6 +32,7 @@ class Transfer
       @status = "reversed"
     else
       "There is no transaction to reverse."
+      @status = "rejected"
     end
   end
 end
